@@ -117,7 +117,7 @@ search-results {
 
 #volym {
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 20px;
   transform: translateY(-50%);
   display: flex;
@@ -133,7 +133,6 @@ search-results {
   border-radius: 50%;
   background-color: #18740304;
   background-color: #187403;
-  border-radius: 50%;
   border: none;
   display: flex;
 }
@@ -142,7 +141,7 @@ search-results {
   writing-mode: vertical-lr;
   direction: rtl;
   width: 20px;
-  height: 400px;
+  height: 500px;
   margin: 0;
 }
 

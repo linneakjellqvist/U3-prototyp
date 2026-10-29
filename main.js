@@ -57,7 +57,7 @@ function meddelande(text){
     msg.classList.remove('hidden')
 
     clearTimeout(msgTimer);
-    msgTimer = setTimeout(() => msg.classList.add('hidden'), 2500);
+    msgTimer = setTimeout(() => msg.classList.add('hidden'), 3500);
 }
 
 function tid(sek) {
