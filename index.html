@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="innehåll">
+        <h1 id="h1">Påverka musikuppleveslen <br>i hotellets lobby</h1>
+        <div id="search-container">
+            <div id="volym">
+                <button id="plus"><img src="bilder/plus.svg"></button>
+                <input id="volume" type="range" id="volume-slider" min="0" max="100" step="0.01" value="1">
+                <button id="minus"><img src="bilder/minus.svg"></button>
+                <img id="volym-ikon" src="bilder/volym.svg">
+            </div>
+            <div id="låtförslag">
+                <h1 id="låth1">Hitta en låt i listan</h1>
+                <h2>Välj en låt för att lägga till i kölistan</h2>
+                <div id="card-container"></div>
+                <div id="msg" class="hidden"></div>
+                <div id="spelad-låt" class="hidden">
+                    <div id="spelad-rad">
+                    <img id="spelad-bild" src="" alt="">
+                    <span id="spelad-titel"></span>
+                    <div class="progress-wrap">
+                        <span id="tid-nu">0:00</span>
+                        <input type="range" id="progress" min="20" max="50" step="1" value="0" disabled>
+                        <span id="tid-kvar">0:00</span>
+                        </div>
+                        <div id="kö-knapp">
+                            <img src="bilder/ko.svg" id="kö">
+                            <span id="kö-räknare" class="hidden">0</span>
+                        </div>
+                    </div>
+                    <div id="kö-lista" class="hidden">
+                    <p>Kölistan:</p>
+                    <ul id="kö-li"></ul>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

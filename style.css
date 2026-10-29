@@ -1,0 +1,357 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: geneva, sans-serif;
+  background-image: url('bilder/bakgrund.svg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#innehåll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.new-card{
+  background-color: #187403;
+  height: 70px;
+  border-radius: 24px;
+}
+
+#msg.hidden{
+display: none;
+}
+
+#msg{
+  position: fixed;
+  bottom: 80px;
+  margin-left: 550px;
+  background-color: #105002cb;
+  color: #ffffff;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+
+#kö-li {
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+}
+
+#kö-lista li {
+  padding: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+#h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+#låth1{
+  font-size: 2.5rem;
+}
+
+form {
+  width: 100%;
+  max-width: 584px;
+}
+
+#search {
+  width: 500px;
+  height: 46px;
+  padding: 0 20px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  outline: none;
+}
+
+#search:hover {
+  border-color: transparent;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+#next-side {
+  padding: 0;
+  background: #187403;
+  cursor: pointer;
+  border: 1px solid #187403;
+  border-radius: 24px;
+  width: 200px;
+}
+
+#next-side a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #e2e8e8;
+  text-decoration: none;
+}
+
+#next-side:hover {
+  border-color: #5a5b5d;
+}
+
+search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 584px;
+}
+
+#volym {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 8px;
+  border-radius: 30px;
+}
+
+#plus,
+#minus {
+  border-radius: 50%;
+  background-color: #18740304;
+  background-color: #187403;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+}
+
+#volume {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 20px;
+  height: 400px;
+  margin: 0;
+}
+
+#search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 500px;
+}
+
+#search-results {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  background-color: #fefffd;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.132);
+  border-radius: 15px;
+  margin-top: 0;
+}
+
+#search-results li {
+  width: 490px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  color: #000000;
+}
+
+#search-results button {
+  border-radius: 50%;
+  background-color: #187403;
+  border: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#card-container {
+  width: 600px;
+  background-color: #18740394;
+  margin: auto;
+  border-radius: 30px;
+  padding-bottom: 90px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 80px 1fr 60px;
+  grid-template-areas: "image title play-button";
+  padding: 20px;
+  gap: 20px;
+}
+
+.card p {
+  color: #ffffff;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 10px;
+  grid-area: image;
+  height: 80px;
+}
+
+.card button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: #187403;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card button .playBtn {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.card button .köIkon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.card>img {
+  object-fit: cover;
+  border-radius: 10px;
+  grid-area: image;
+  height: 80px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  color: #626262;
+  font-size: 20px;
+}
+
+#start-side {
+  padding: 0;
+  background: #187403;
+  cursor: pointer;
+  border: 1px solid #187403;
+  border-radius: 24px;
+  width: 200px;
+}
+
+#start-side a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #e2e8e8;
+  text-decoration: none;
+}
+
+#start-side:hover {
+  background: #187403;
+}
+
+#spelad-låt {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background: #1c3a0d;
+  color: #ffffff;
+  z-index: 10;
+  flex-direction: column;
+}
+
+#spelad-rad {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 24px;
+  gap: 16px;
+  align-items: center;
+}
+
+.låten-spelas {
+  background-color: #187403;
+}
+
+#spelad-låt.hidden {
+  display: none;
+}
+
+#spelad-bild {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#spelad-titel {
+  font-size: 14px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+
+.progress-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  /* siffrorna hoppar inte i sidled */
+}
+
+#spelad-knapp {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#progress {
+  width: 900px;
+  margin: 0;
+}
+
+#låtförslag {
+  margin-top: 50px;
+}

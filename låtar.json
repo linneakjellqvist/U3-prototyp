@@ -1,0 +1,56 @@
+[
+    {
+        "image": "images/låt1.svg",
+        "name": "Roasted",
+        "artist": "Aves",
+        "audio": "audio/låt1.mp3"
+    },
+    {
+        "image": "images/låt2.svg",
+        "name": "Almost remembered",
+        "artist": "Avner Kelmer",
+        "audio": "audio/låt2.mp3"
+    },
+    {
+        "image": "images/låt3.svg",
+        "name": "Held toghether by strings",
+        "artist": "Avner Kelmer",
+        "audio": "audio/låt3.mp3"
+    },
+    {
+        "image": "images/låt4.svg",
+        "name": "Ave verum corpus K 618",
+        "artist": "Carmel Quartet",
+        "audio": "audio/låt4.mp3"
+    },
+    {
+        "image": "images/låt5.svg",
+        "name": "Streets",
+        "artist": "Curtis Cole",
+        "audio": "audio/låt5.mp3"
+    },
+    {
+        "image": "images/låt6.svg",
+        "name": "Julies Corner",
+        "artist": "Roie Shpigler",
+        "audio": "audio/låt6.mp3"
+    },
+    {
+        "image": "images/låt7.svg",
+        "name": "Keep it moving",
+        "artist": "Yonatan Riklis",
+        "audio": "audio/låt7.mp3"
+    },
+    {
+        "image": "images/låt8.svg",
+        "name": "Starlight reflection",
+        "artist": "Ziggy",
+        "audio": "audio/låt8.mp3"
+    },
+    {
+        "image": "images/låt9.svg",
+        "name": "Walk the walk",
+        "artist": "Ziggy",
+        "audio": "audio/låt9.mp3"
+    }
+]

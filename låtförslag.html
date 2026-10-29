@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="randercards.js" type="module"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start-side"><a href="index.html"><-- Gå tillbaka</a></button>
+    <h1>Hitta en låt i listan</h1>
+    <h2>Välj en låt för att spela upp den</h2>
+    <div id="card-container"></div>
+    <div id="spelad-låt" class="hidden">
+        <img id="spelad-bild" src="" alt="">
+        <span id="spelad-titel"></span>
+        <div class="progress-wrap">
+            <span id="tid-nu">0:00</span>
+            <input type="range" id="progress" min="0" max="100" step="0.1" value="0">
+            <span id="tid-kvar">0:00</span>
+        </div>
+        <button id="spelad-knapp">⏸</button>
+    </div>
+</body>
+</html>
