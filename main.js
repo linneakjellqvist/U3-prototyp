@@ -1,6 +1,4 @@
-const searchInput = document.getElementById('search');
-const searchContainer = document.getElementById('search-container');
-const searchResults = document.getElementById('search-results');
+
 const volumeSlider = document.getElementById('volume');
 const container = document.getElementById('card-container');
 
@@ -162,11 +160,25 @@ function nästaLåt() {
 function väljLåt(låt) {
     if (!currentAudio) {
         spela(låt);
-    } else {
+        return;
+    } 
+
+    let rad = 0;
+    for(let i= kö.length - 1; i >= 0; i--){
+        if(kö[i] === låt){
+            rad++;
+        }else{
+            break;
+        }
+    }
+
+    if(rad >= 2){
+        meddelande('Låten är redan köad som nästa låt');
+        return;
+    }
         kö.push(låt);//lägger till låten som är köad i kön 
         visaKö();
         meddelande(`${låt.name} har lagts till i kölistan`);
-    }
 }
 
 function skapaKnapp(låt) {
@@ -199,33 +211,6 @@ function createCards(låtar) {
     }
 }
 
-searchInput.addEventListener('input', () => {
-    const value = searchInput.value.toLowerCase().trim();
-    searchResults.innerHTML = "";
-
-    if (value === "") {
-        return;
-    }
-
-    const filtered = songs.filter(song => song.name.toLowerCase().includes(value));
-
-    if (filtered.length === 0) {
-        searchResults.innerHTML = "<p>Denna låt finns inte i vårt system </p>";
-        return;
-    }
-
-    for (const song of filtered) {
-        const li = document.createElement('li');
-        li.classList.add('search-result');
-
-        li.textContent = `${song.name}, ${song.artist}`;
-        li.append(skapaKnapp(song));
-
-
-        searchResults.append(li);
-    }
-});
-
 volumeSlider.addEventListener('input', uppdateraVolym);
 
 function uppdateraVolym(){
@@ -237,11 +222,15 @@ function uppdateraVolym(){
 plus.addEventListener('click', () => {
     volumeSlider.stepUp(5); 
     uppdateraVolym();
+    plus.classList.add('plus_tryck');
+    setTimeout(() => plus.classList.remove('plus_tryck'), 150);
 });
 
 minus.addEventListener('click', () => {
     volumeSlider.stepDown(5);
     uppdateraVolym();
+    minus.classList.add('minus_tryck');
+    setTimeout(() => minus.classList.remove('minus_tryck'), 150);
 });
 
 
