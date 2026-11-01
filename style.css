@@ -51,6 +51,21 @@ display: none;
 #kö-lista li {
   padding: 6px;
 }
+#kö-knapp {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #187403;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#kö-knapp img {
+  width: 20px;
+  height: 20px;
+}
 
 .hidden {
   display: none;
